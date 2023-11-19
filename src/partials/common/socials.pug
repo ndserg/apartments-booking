@@ -1,0 +1,6 @@
+ul(class=(socialsPlace +"__socials " +socialsPlace +"-socials"))
+  each social in socials
+    li(class=socialsPlace +"-socials__item ")
+      a(class=(socialsPlace +"-socials__link") href=social.link aria-label="Ссылка на " +social.icon)
+        svg(width="10" height="10")
+          use(xlink:href="@img/icons/sprite.svg#icon-" +social.icon)

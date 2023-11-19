@@ -1,0 +1,150 @@
+.footer-contacts {
+  display: none;
+
+  @media (min-width: $tablet-sm-width) {
+    display: block;
+
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.footer-contacts__wrapper {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  column-gap: 15px;
+
+  align-items: center;
+
+  @media (min-width: $tablet-sm-width) {
+    row-gap: 20px;
+    column-gap: 25px;
+
+    justify-content: center;
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    column-gap: 45;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 20px;
+  }
+}
+
+.footer-contacts__item {
+  display: block;
+
+  text-decoration: none;
+
+  @media (min-width: $tablet-sm-width) {
+    display: flex;
+
+    column-gap: 8px;
+
+    align-items: center;
+
+    &--email {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    display: flex;
+
+    &--email {
+      display: flex;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 10px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.footer-contacts__icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: $blue;
+  border-radius: 50%;
+
+  svg {
+    width: 15px;
+    height: 15px;
+
+    fill: $white;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.footer-contacts__text {
+  display: none;
+
+  @media (min-width: $tablet-sm-width) {
+    display: initial;
+
+    font-size: 16px;
+    color:$white;
+    text-decoration: none;
+  }
+}
+
+.footer-contacts__button {
+  display: none;
+
+  @media (min-width: $tablet-sm-width) {
+    display: block;
+
+    padding-top: 8px;
+    padding-right: 30px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+
+    font-size: 12px;
+
+    border-radius: 25px;
+    box-shadow: 0 10px 20px 0 rgba(255 122 0 / 20%);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+
+    font-size: 18px;
+  }
+}
