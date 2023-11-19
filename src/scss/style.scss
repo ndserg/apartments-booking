@@ -1,0 +1,12 @@
+/* Global */
+@import "fonts";
+@import "global/normalize";
+@import "global/variables";
+@import "global/global";
+@import "global/buttons";
+
+/* Blocks */
+@import "blocks/header/header";
+@import "blocks/header/burger-button";
+@import "blocks/header/header-menu";
+@import "blocks/header/header-contacts";

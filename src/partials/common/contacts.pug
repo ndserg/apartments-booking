@@ -1,0 +1,16 @@
+div(class=(contactsPlace +"__contacts " +contactsPlace +"-contacts"))
+  div(class=(contactsPlace +"-contacts__wrapper"))
+    each contact in header_contacts
+      |
+      |
+      a(class=(contactsPlace +"-contacts__item " +contactsPlace +"-contacts__item--" +contact.icon) href=contact.link)
+        span(class=contactsPlace +"-contacts__icon")
+          svg(width="15" height="15")
+            use(xlink:href="@img/icons/sprite.svg#icon-" +contact.icon)
+        |
+        |
+        span(class=(contactsPlace +"-contacts__text")) #{contact.text}
+        |
+        |
+  if contactsButton
+    button.button(class=(contactsPlace +"-contacts__button") type="button") Заказать звонок

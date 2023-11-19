@@ -1,0 +1,135 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+
+  white-space: nowrap;
+
+  border: 0;
+}
+
+/* Theme globals */
+body {
+  position: relative;
+
+  padding: 0;
+  margin: 0;
+
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #111111;
+
+  &.locked {
+    overflow: hidden;
+
+    &::after {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      content: "";
+
+      background: rgba(83 83 83 / 48%);
+      backdrop-filter: blur(2.5px);
+    }
+  }
+
+  @media (min-width: $mobile-lg-width) {
+    &::before {
+      width: calc(50% - 4px);
+      height: 566px;
+    }
+  }
+
+  @media (min-width: $tablet-sm-width) {
+    &::before {
+      width: calc(50% + 57px);
+      height: 509px;
+    }
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    &::before {
+      width: calc(50% + 158px);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: calc(50% + 30px);
+      height: 810px;
+    }
+  }
+}
+
+.container {
+  width: 288px;
+  margin: 0 auto;
+
+  @media (min-width: $mobile-lg-width) {
+    width: 448px;
+  }
+
+  @media (min-width: $tablet-sm-width) {
+    width: 736px;
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    width: 968px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1280px;
+  }
+}
+
+.section-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: normal;
+  color: $blue;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+
+    font-size: 36px;
+  }
+}

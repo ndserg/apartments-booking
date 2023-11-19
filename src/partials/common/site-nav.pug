@@ -1,0 +1,6 @@
+- var activeClass = "current-menu-item";
+
+ul(class="" +navClass)
+  each link in site_links
+    li(class=link.active ? activeClass : '')
+      a(href=link.link)= link.text

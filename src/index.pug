@@ -1,0 +1,12 @@
+extends partials/common/layout
+
+block vars
+  - var siteTitle = "Аренда квартир - главная страница"
+
+block content
+  include partials/main-page/intro
+  = '\n'
+  include partials/main-page/main-page
+  = '\n'
+block append scripts
+  include partials/common/scripts

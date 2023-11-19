@@ -1,0 +1,29 @@
+- var contactsPlace = "header";
+- var contactsButton = true;
+
+block logoVars
+  - var logoClass = "header__logo";
+  - var width = "87";
+  - var height = "35";
+  - var altText = "Логотип Аренда квартир 59";
+  - var navClass = "header-menu__list";
+
+header.header
+  .header__wrapper.container
+    .header__column.header__column--left
+      //- active class = burger-button--active
+      button.burger-button(type="button" aria-expanded="true" aria-label="Открыть или закрыть мобильное меню")
+        span
+        span
+        span
+      |
+      |
+      |
+      include logo
+      = '\n'
+      //- active class = header__nav--active
+      nav.header-menu.header__nav.header__nav--closed
+        include site-nav
+    = '\n'
+    .header__column.header__column--right
+      include contacts
