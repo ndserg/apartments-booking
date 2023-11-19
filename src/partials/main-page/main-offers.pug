@@ -1,2 +1,35 @@
-section.container
-  h2 Наши квартиры
+- var badgeClass = "main-offers__item--badge";
+
+section.main-offers.container
+  h2.main-offers__title.section-title Наши квартиры
+  = "\n"
+  ul.main-offers__list
+    each offer in all_offers
+      li.main-offers__item(class=(offer.badge ? badgeClass : "") data-badge=(offer.badge ? offer.badge : false))
+        .main-offers__description
+          h3.main-offers__item-title
+            span #{offer.title}
+            span #{offer.shortTitle}
+          p.main-offers__price
+            | Сутки:&nbsp;
+            span #{offer.price} ₽
+          p.main-offers__address #{offer.address}
+            svg(width="22" height="22")
+              use(xlink:href="@img/icons/sprite.svg#icon-location")
+          |
+          |
+          a.main-offers__link.button(href="#") Подробнее
+        .main-offers__img
+          picture
+            source(media="(min-width: 1340px)" srcset=offer.img + "-desktop.webp" type="image/webp")
+            source(media="(min-width: 1000px)" srcset=offer.img + "-mobile-lg.webp" type="image/webp")
+            source(srcset=offer.img + "-mobile-sm.webp" type="image/webp")
+            source(media="(min-width: 1340px)" srcset=offer.img + "-desktop.jpg")
+            source(media="(min-width: 1000px)" srcset=offer.img +"-mobile-lg.jpg")
+            |
+            |
+            img(src=offer.img + "-mobile-sm.jpg" width="140" height="120" alt=offer.title)
+  |
+  |
+  |
+  a.main-offers__button-all.button(href="#") Смотреть все квартиры

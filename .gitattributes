@@ -6,3 +6,6 @@
 *.webp binary
 *.woff binary
 *.woff2 binary
+
+# except these which we want crlf
+*.ttf eol=crlf

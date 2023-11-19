@@ -1,0 +1,202 @@
+.feedback {
+  position: relative;
+
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  background-color: $white;
+
+  @media (min-width: $tablet-sm-width) {
+    padding-top: 140px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 40px;
+  }
+}
+
+.feedback__wrapper {
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba($black, 10%);
+
+  @media (min-width: $mobile-lg-width) {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  @media (min-width: $tablet-sm-width) {
+    position: absolute;
+    top: 80px;
+    z-index: 5;
+
+    width: 290px;
+    padding-top: 40px;
+    padding-right: 22px;
+    padding-bottom: 40px;
+    padding-left: 22px;
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    top: 40px;
+
+    width: 302px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 100px;
+    left: 108px;
+
+    width: 394px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.feedback__title {
+  text-align: center;
+}
+
+.feedback__form {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 10px;
+
+  input,
+  textarea {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+    font-size: 12px;
+
+    border: 1px solid rgba($black, 50%);
+    border-radius: 10px;
+
+    @media (min-width: $desktop-width) {
+      row-gap: 15px;
+
+      font-size: 16px;
+    }
+  }
+}
+
+.feedback__button {
+  align-self: center;
+
+  width: 200px;
+  padding-top: 8px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  margin-top: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  @media (min-width: $tablet-sm-width) {
+    width: 146px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    border-radius: 22px;
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    width: 152px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-size: 16px;
+
+    border-radius: 25px;
+  }
+}
+
+.feedback__info {
+  display: none;
+
+  @media (min-width: $tablet-sm-width) {
+    position: relative;
+
+    display: block;
+
+    width: 374px;
+    margin-left: auto;
+
+    font-size: 14px;
+    font-weight: 40;
+    line-height: 1.4;
+
+    &::before {
+      position: absolute;
+      top: -44px;
+      left: -50px;
+
+      display: block;
+
+      width: 70px;
+      height: 70px;
+
+      content: "";
+
+      background-image: url("@img/icons/icon-quotes.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    width: 606px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 704px;
+
+    font-size: 18px;
+
+    &::before {
+      top: -38px;
+      left: -44px;
+    }
+  }
+}
+
+.feedback__text {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.feedback__admin {
+  margin: 0;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  line-height: 2;
+  color: $blue;
+}
+
+.feedback__admin-position {
+  margin: 0;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+}

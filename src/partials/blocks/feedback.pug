@@ -1,0 +1,14 @@
+section.feedback.container
+  div.feedback__wrapper
+    h2.feedback__title.section-title Напишите нам
+    = '\n'
+    form.feedback__form(action="#" method="post")
+      input(type="text" name="name" id="name" placeholder="Имя" required)
+      input(type="email" name="email" id="email" placeholder="Email" required)
+      textarea(name="message", cols="30", rows="6" placeholder="Ваше сообщение" required)
+      button.feedback__button.button(type="submit") Отправить
+  .feedback__info
+    p.feedback__text.
+      Дорогой гость, если у тебя есть какие-то пожелания или притензии по улучшению качества обслуживания или просто хочешь оставить свой комментарий, то заполни форму. Мы обязательно ответим тебе, или опубликуем его на нашем сайте.
+    p.feedback__admin Татьяна Вячеславовна
+    p.feedback__admin-position Директор гостиницы

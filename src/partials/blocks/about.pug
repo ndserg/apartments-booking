@@ -1,0 +1,15 @@
+section#about.about.container
+  h2.about__title.section-title О нас
+  = "\n"
+  .about__content
+    p Сегодня «Домашняя гостиница» — одна из крупнейших в Пермском крае гостиничных сетей, динамично расширяющая географический охват и повышающая качество сервиса.
+  = "\n"
+
+  ul.about__list
+    each item in about
+      li.about__item
+        .about__img
+          img(src=item.img width="50" height="50" alt=item.altText)
+        p.about__info
+          span.about__count #{item.count}
+          span.about__text #{item.countText}
