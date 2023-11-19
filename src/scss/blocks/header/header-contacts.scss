@@ -1,0 +1,158 @@
+.header-contacts {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+  padding-right: 18px;
+  padding-left: 18px;
+
+  @media (min-width: $mobile-lg-width) {
+    padding-right: 0;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $tablet-sm-width) {
+    justify-content: space-between;
+
+    padding-left: 40px;
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    padding-left: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 35px;
+  }
+}
+
+.header-contacts__wrapper {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  column-gap: 15px;
+
+  align-items: center;
+
+  @media (min-width: $tablet-sm-width) {
+    column-gap: 25px;
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    column-gap: 45;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 20px;
+  }
+}
+
+.header-contacts__item {
+  display: block;
+
+  text-decoration: none;
+
+  @media (min-width: $tablet-sm-width) {
+    display: flex;
+
+    column-gap: 8px;
+
+    align-items: center;
+
+    &--email {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    display: flex;
+
+    &--email {
+      display: flex;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 10px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.header-contacts__icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: $white;
+  border-radius: 50%;
+
+  svg {
+    width: 15px;
+    height: 15px;
+
+    fill: $blue;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.header-contacts__text {
+  display: none;
+
+  @media (min-width: $tablet-sm-width) {
+    display: initial;
+
+    font-size: 16px;
+    color:$white;
+    text-decoration: none;
+  }
+}
+
+.header-contacts__button {
+  display: none;
+
+  @media (min-width: $tablet-sm-width) {
+    display: block;
+
+    padding-top: 8px;
+    padding-right: 30px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+
+    font-size: 12px;
+
+    border-radius: 25px;
+    box-shadow: 0 10px 20px 0 rgba(255 122 0 / 20%);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+
+    font-size: 18px;
+  }
+}

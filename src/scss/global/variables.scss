@@ -1,0 +1,20 @@
+// colors
+$black: #111111;
+$white: #ffffff;
+$blue: #2b7af1;
+$green: #5cb85c;
+$yellow: #fcc226;
+$bullets-color: #ffb039;
+$red: #f63e3e;
+$buttons-gradient: linear-gradient(90deg, #ff7a00 0.2%, #ffb039 99.82%);
+$buttons-gradient-hover: linear-gradient(90deg, #DD6A00 0.2%, #F99806 99.82%);
+$buttons-shadow: 0 10px 20px 0 rgba($black, 10%);
+$buttons-shadow-hover: 0 10px 20px 0 rgba(255 122 0 / 20%), 0 4px 20px 0 rgba($black, 10%) inset;
+$buttons-shadow-active: 0 10px 20px 0 rgba(255 122 0 / 20%), 0 7px 5px 0 rgba($black, 20%) inset;;
+
+// viewports
+$mobile-sm-width: 320px;
+$mobile-lg-width: 480px;
+$tablet-sm-width: 768px;
+$tablet-lg-width: 1000px;
+$desktop-width: 1340px;
