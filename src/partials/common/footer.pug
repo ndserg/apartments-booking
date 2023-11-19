@@ -1,0 +1,26 @@
+- var contactsPlace = "footer";
+- var socialsPlace = "footer";
+- var contactsButton = false;
+
+block logoVars
+  - var logoClass = "footer__logo";
+  - var width = "87";
+  - var height = "35";
+  - var altText = "Логотип Аренда квартир 59";
+  - var navClass = "footer-menu__list";
+
+footer.footer
+  .footer__wrapper.container
+    div.footer__logo-wrapper
+      include logo
+    //- active class = footer__nav--active
+    nav.footer-menu.footer__nav
+      include site-nav
+    = '\n'
+    include contacts
+    = '\n'
+    include socials
+    = '\n'
+    .footer__additional
+      a.footer__agreement(href="#") Пользовательское соглашение
+      p.footer__copyright © Copyright 2021, «Домашняя гостиница»

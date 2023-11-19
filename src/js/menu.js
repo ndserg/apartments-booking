@@ -1,5 +1,5 @@
 const VEWPORTS = {
-  desktop: 1280,
+  desktop: 1340,
 };
 
 let body = null;
