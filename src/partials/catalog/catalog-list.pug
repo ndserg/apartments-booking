@@ -1,0 +1,25 @@
+ul.catalog__list.offers-list
+  each item in all_offers
+    li.offers-list__item
+      h2.offers-list__title #{item.title}
+      |
+      |
+      p.offers-list__description #{item.info}
+      .offers-list__info
+        p.offers-list__price #{item.price} ₽ <span>за сутки</span>
+        p.offers-list__address
+          span.offers-list__address-icon
+            svg(width="22" height="22")
+              use(xlink:href="@img/icons/sprite.svg#icon-location")
+          span.offers-list__address-text #{item.address}
+        |
+        |
+        a.offers-list__link.button(href="single-page.html") Подробнее
+      .offers-list__img
+        picture
+          source(media="(min-width: 1340px)" srcset=item.img + "-tablet-sm.webp" type="image/webp")
+          source(srcset=item.img + "-mobile-lg.webp" type="image/webp")
+          source(media="(min-width: 1340px)" srcset=item.img + "-tablet-sm.jpg")
+          |
+          |
+          img(src=item.img + "-mobile-lg.jpg" width="288" height="192" alt=(item.title +" по адресу " +item.address))

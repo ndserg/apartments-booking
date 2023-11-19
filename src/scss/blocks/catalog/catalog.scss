@@ -1,0 +1,13 @@
+.catalog {
+  padding-top: 20px;
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet-sm-width) {
+    padding-top: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 50px;
+    margin-bottom: 120px;
+  }
+}

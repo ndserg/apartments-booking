@@ -1,0 +1,10 @@
+extends partials/common/layout
+
+block vars
+  - var siteTitle = "Наши Квартиры"
+
+block content
+  include partials/catalog/catalog-page
+  = '\n'
+block append scripts
+  include partials/common/scripts
