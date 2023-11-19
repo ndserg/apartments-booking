@@ -1,0 +1,159 @@
+.review-card {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 15px;
+
+  padding: 10px;
+  margin: 0;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+
+  background-color: $white;
+  border-radius: 10px;
+
+  @media (min-width: $desktop-width) {
+    row-gap: 24px;
+
+    padding: 40px;
+  }
+}
+
+.review-card__header {
+  display: flex;
+
+  column-gap: 20px;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-card__title {
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 800;
+  color: $blue;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.review-card__stars {
+  position: relative;
+
+  display: block;
+
+  width: 83px;
+  height: 16px;
+
+  font-size: 0;
+
+  &::before {
+    display: block;
+
+    height: 100%;
+
+    content: "";
+
+    background-color: transparent;
+    background-image: url("@img/icons/icon-stars-empty.svg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: auto 16px;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    height: 100%;
+    overflow: hidden;
+
+    &::before {
+      display: block;
+
+      height: 100%;
+
+      content: "";
+
+      background-color: transparent;
+      background-image: url("@img/icons/icon-stars-active.svg");
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: auto 16px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 115px;
+    height: 22px;
+
+    &::before,
+    & span::before {
+      background-size: auto 22px;
+    }
+  }
+}
+
+.review-card__text {
+  padding: 0;
+  margin: 0;
+
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: $black;
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+  }
+}
+
+.review-card__footer {
+  display: flex;
+
+  column-gap: 20px;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-top: auto;
+}
+
+.review-card__person {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: $blue;
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+  }
+}
+
+.review-card__address,
+.review-card__date {
+  padding: 0;
+  margin: 0;
+
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 1.3;
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: normal;
+  }
+}

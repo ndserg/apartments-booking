@@ -1,0 +1,143 @@
+.contacts {
+  margin-bottom: 100px;
+
+  @media (min-width: $mobile-lg-width) {
+    display: grid;
+
+    grid-template-columns: auto auto;
+
+    column-gap: 24px;
+
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 160px;
+  }
+}
+
+.contacts__info {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 30px;
+
+  margin-bottom: 30px;
+
+  @media (min-width: $mobile-lg-width) {
+    row-gap: 40px;
+
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 90px;
+  }
+}
+
+.contacts__list {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 15px;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.contacts__link {
+  display: flex;
+
+  column-gap: 15px;
+
+  align-items: center;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  color: $black;
+  text-decoration: none;
+
+  @media (min-width: $desktop-width) {
+    column-gap: 20px;
+
+    font-size: 18px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.contacts__icon {
+  display: flex;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  background-color: $blue;
+  border-radius: 50%;
+
+  svg {
+    width: 12px;
+    height: 12px;
+
+    fill: $white;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  height: 200px;
+
+  background-color: rgba(211 211 211 / 50%);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba($black, 10%);
+
+  @media (min-width: $mobile-lg-width) {
+    width: 190px;
+    height: 328px;
+  }
+
+  @media (min-width: $tablet-sm-width) {
+    width: 464px;
+    height: 338px;
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    width: 656px;
+    height: 338px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 758px;
+    height: 430px;
+  }
+}

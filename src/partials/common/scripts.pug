@@ -1,1 +1,27 @@
 script(src="js/main.min.js")
+script(src="vendors/swiper/js/swiper-bundle.min.js")
+script.
+    var swiper = new Swiper('.reviews__slider', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      breakpoints: {
+        768: {
+          slidesPerGroup: 2,
+          slidesPerView: 2
+        },
+        1340: {
+          slidesPerGroup: 2,
+          slidesPerView: 2,
+          spaceBetween: 20,
+        }
+      },
+      navigation: {
+        nextEl: '.reviews__button--next',
+        prevEl: '.reviews__button--prev',
+      },
+      pagination: {
+        el: '.reviews__pagination',
+        clickable: true,
+      }
+    });

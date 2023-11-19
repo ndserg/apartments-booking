@@ -1,0 +1,166 @@
+.about {
+  display: flex;
+
+  flex-direction: column;
+
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+
+  background-image: url("@img/divider-bg.svg");
+  background-repeat: no-repeat;
+  background-position: 50% bottom;
+  background-size: 100%;
+
+  @media (min-width: $tablet-sm-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+.about__title {
+  @media (min-width: $tablet-sm-width) {
+    width: 100%;
+  }
+}
+
+.about__content {
+  margin-bottom: 40px;
+
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  color: $black;
+
+  * {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $tablet-sm-width) {
+    width: 278px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-lg-width) {
+    width: 480px;
+
+    font-size: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 434px;
+
+    font-size: 18px;
+  }
+}
+
+.about__list {
+  display: flex;
+
+  row-gap: 30px;
+
+  justify-content: space-between;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  @media (min-width: $mobile-lg-width) {
+    column-gap: 32px;
+
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $tablet-sm-width) {
+    column-gap: 20px;
+
+    width: 424px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 90px;
+
+    width: 750px;
+  }
+}
+
+.about__item {
+  display: flex;
+
+  column-gap: 20px;
+
+  align-content: center;
+
+  width: 128px;
+
+  @media (min-width: $desktop-width) {
+    width: 190px;
+  }
+}
+
+.about__img {
+  width: 50px;
+  height: 50px;
+
+  img {
+    width: 100%;
+
+    object-fit: cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 88px;
+    height: 88px;
+  }
+}
+
+.about__info {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 0;
+  margin: 0;
+}
+
+.about__count {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: normal;
+  color: $blue;
+
+  @media (min-width: $desktop-width) {
+    font-size: 36px;
+  }
+}
+
+.about__text {
+  font-size: 12px;
+  font-weight: 400;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}

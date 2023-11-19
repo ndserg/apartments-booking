@@ -1,0 +1,30 @@
+section#contacts.contacts.container
+  .contacts__wrapper
+    h2.contacts__title.section-title Контакты
+    = "\n"
+    .contacts__info
+      ul.contacts__list
+        each contact in contacts
+          li.contacts__item
+            a(class=("contacts__link " +"contacts__link--" +contact.icon) href=contact.link)
+              span.contacts__icon
+                svg(width="12" height="12")
+                  use(xlink:href="@img/icons/sprite.svg#icon-" +contact.icon)
+              |
+              |
+              span.contacts__text #{contact.text}
+              |
+              |
+      ul.contacts__list
+        each social in contacts__social
+          li.contacts__item
+            a(class=("contacts__link " +"contacts__link--" +social.icon) href=social.link)
+              span.contacts__icon
+                svg(width="12" height="12")
+                  use(xlink:href="@img/icons/sprite.svg#icon-" +social.icon)
+              |
+              |
+              span.contacts__text #{social.text}
+              |
+              |
+  .contacts__map

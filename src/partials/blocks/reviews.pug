@@ -1,0 +1,22 @@
+section.reviews
+  .reviews__wrapper.container
+    h2.reviews__title.section-title Отзывы клиентов
+    = "\n"
+    .reviews__slider.swiper
+      .reviews__swiper-wrapper.swiper-wrapper
+        each review in reviews
+          .swiper-slide
+            article.reviews__item.review-card
+              .review-card__header
+                h3.review-card__title #{review.title}
+                .review-card__stars
+                  span(style="width:" +review.rating +"%;")
+              p.review-card__text #{review.text}
+              .review-card__footer
+                .review-card__author
+                  p.review-card__person #{review.author}
+                  p.review-card__address #{review.address}
+                time.review-card__date(datetime=review.date) #{review.date_text}
+      .reviews__pagination
+    .reviews__button.reviews__button--prev
+    .reviews__button.reviews__button--next
