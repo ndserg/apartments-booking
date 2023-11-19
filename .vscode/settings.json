@@ -1,0 +1,9 @@
+{
+  "json.schemaDownload.enable": true,
+
+  "path-autocomplete.pathMappings": {
+    "@img": "${folder}/src/img",
+    "@scss": "${folder}/src/scss",
+    "@js": "${folder}/src/js",
+  }
+}
