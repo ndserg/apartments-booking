@@ -1,0 +1,125 @@
+extends partials/common/layout
+
+block vars
+  - var siteTitle = "1-к квартира, 31 м², 1/5 эт."
+
+block content
+  main.page-offer
+    article.offer.container
+      h1.offer__title.section-title #{siteTitle}
+      = "\n"
+      .offer__gallery
+        .offer__swiper.swiper.mySwiper2
+          .swiper-wrapper
+            .swiper-slide
+              img(src="@img/offers/apartment-1-desktop.jpg", alt="slide-1")
+            .swiper-slide
+              img(src="@img/offers/apartment-2-desktop.jpg", alt="slide-2")
+            .swiper-slide
+              img(src="@img/offers/apartment-3-desktop.jpg", alt="slide-3")
+            .swiper-slide
+              img(src="@img/offers/apartment-4-desktop.jpg", alt="slide-4")
+            .swiper-slide
+              img(src="@img/offers/apartment-5-desktop.jpg", alt="slide-5")
+            .swiper-slide
+              img(src="@img/offers/apartment-6-desktop.jpg", alt="slide-6")
+            .swiper-slide
+              img(src="@img/offers/apartment-7-desktop.jpg", alt="slide-7")
+        .offer__thumbs.swiper.mySwiper(thumbsSlider)
+          .swiper-wrapper
+            .swiper-slide
+              img(src="@img/offers/apartment-1-mobile-sm.jpg", alt="thumb-1")
+            .swiper-slide
+              img(src="@img/offers/apartment-2-mobile-sm.jpg", alt="thumb-2")
+            .swiper-slide
+              img(src="@img/offers/apartment-3-mobile-sm.jpg", alt="thumb-3")
+            .swiper-slide
+              img(src="@img/offers/apartment-4-mobile-sm.jpg", alt="thumb-4")
+            .swiper-slide
+              img(src="@img/offers/apartment-5-mobile-sm.jpg", alt="thumb-5")
+            .swiper-slide
+              img(src="@img/offers/apartment-6-mobile-sm.jpg", alt="thumb-6")
+            .swiper-slide
+              img(src="@img/offers/apartment-7-mobile-sm.jpg", alt="thumb-7")
+        .offer__swipe-button.offer__swipe-button--next
+        .offer__swipe-button.offer__swipe-button--prev
+      = '\n'
+
+      .offer__description
+        h2.offer__subtitle Однокомнатная квартира
+        |
+        |
+        p.offer__text Сдам 1- квартиру с балконом есть всё необходимое для проживания выписываю ДОКУМЕНТЫ ЧЕК ОНЛАЙН 25+звонить смс не читаю
+        p.offer__price 1 200 ₽ <span>за сутки</span>
+        p.offer__address
+          span.offer__address-icon
+            svg(width="22" height="22")
+              use(xlink:href="@img/icons/sprite.svg#icon-location")
+          span.offer__address-text Березники, ул.Юбилейная 108
+        |
+        |
+        a.offer__link.button(href="#") Забронировать
+      = '\n'
+
+      .offer__specification
+        h2.offer__specification-title Оснащение:
+        |
+        |
+        ul.offer__list
+          li.offer__list-item Холодильник
+          li.offer__list-item Стиральная машина
+          li.offer__list-item СВЧ
+          li.offer__list-item Телевизор плазма
+          li.offer__list-item Цифровое телевидение
+          li.offer__list-item Сушка
+          li.offer__list-item Балкон
+          li.offer__list-item Домофон
+          li.offer__list-item Wi -fi
+          li.offer__list-item Вся посуда
+          li.offer__list-item Два комплекта полотенец
+          li.offer__list-item Всегда качественное постельное белье
+          li.offer__list-item Большой, комфортный раздвижной диван
+          li.offer__list-item Спальное место 1600х2000 (1 спальное место, размещение до 2-х человек, возможно докомплектация раскладушкой или большим надувным матрацем).
+      = '\n'
+
+  .offer__greeting.container
+    p.offer__greeting-text Все сделано с любовью для Вас!
+    a.offer__greeting-button.button(href="#") Смотреть все квартиры
+
+  = "\n"
+  include partials/blocks/about
+  = "\n"
+  include partials/blocks/contacts
+  = "\n"
+  include partials/blocks/reviews
+  = "\n"
+  include partials/blocks/feedback
+
+block append scripts
+  include partials/common/scripts
+  = '\n'
+  script.
+      var swiper2 = new Swiper(".offer__thumbs", {
+        loop: true,
+        spaceBetween: 5,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+          480: {
+            slidesPerView: 4,
+          },
+        }
+      });
+      var swiper3 = new Swiper(".offer__swiper", {
+        loop: true,
+        spaceBetween: 10,
+        effect: "fade",
+        navigation: {
+          nextEl: ".offer__swipe-button--next",
+          prevEl: ".offer__swipe-button--prev",
+        },
+        thumbs: {
+          swiper: swiper2,
+        },
+      });
