@@ -20,7 +20,8 @@
 - Flex и Grid сетки
 - JS: Мобильное меню.
 - Слайдеры с помощью сторонней бибилиотеки Swiper.js
-- Адаптация и посадка верстки на Wordpress (в WP использовались плагины Custom Fiels Suite, Contacts Form 7)
+- Адаптация и посадка верстки на Wordpress (в WP использовались плагины Custom Fiels Suite, Contacts Form 7, Redux).
+- Реализованы: Custom Post Types, Custom Image sizes, Адаптивные изображения, Глобальные Настройки через плагин Redux.
 
 ### Сборка проекта
 

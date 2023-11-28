@@ -1,29 +1,29 @@
 section.page-main__intro.intro
-    .intro__promo
-      .intro__promo-wrapper.container
-        .intro__info
-          h2.intro__title Аренда квартир <br>в Березниках
-          p.intro__text Посуточно или на длительный срок
-          button.intro__button-show-all.button(type="button") Смотреть варианты
-        .intro__img
-          picture
-            source(media="(min-width: 1320px)" srcset=features_img + "-x894.webp" type="image/webp")
-            source(media="(min-width: 1000px)" srcset=features_img + "-x728.webp" type="image/webp")
-            source(media="(min-width: 768px)" srcset=features_img + "-x496.webp" type="image/webp")
-            source(media="(min-width: 480px)" srcset=features_img + "-x448.webp" type="image/webp")
-            source(srcset=features_img + "-x288.webp" type="image/webp")
-            source(media="(min-width: 1320px)" srcset=features_img + "-x894.jpg")
-            source(media="(min-width: 1000px)" srcset=features_img + "-x728.jpg")
-            source(media="(min-width: 768px)" srcset=features_img + "-x496.jpg")
-            source(media="(min-width: 480px)" srcset=features_img + "-x448.jpg")
-            |
-            |
-            img(src=features_img + "-x288.jpg" width="288" height="244" alt="Светлая комната с мебелью и телевизором")
-    .intro__features
-      .container
-        ul.intro__list.intro-features
-          each feature in features
-            li.intro-features__item
-              .intro-features__img
-                img(src=feature.img width='60' height='60' alt=feature.text)
-              p.intro-features__text #{feature.text}
+  .intro__promo
+    .intro__promo-wrapper.container
+      .intro__info
+        h2.intro__title Аренда квартир <br>в Березниках
+        p.intro__text Посуточно или на длительный срок
+        button.intro__button-show-all.button(type="button") Смотреть варианты
+      .intro__img
+        picture
+          source(media="(min-width: 1340px)" srcset=features_img + "-x894.webp" type="image/webp")
+          source(media="(min-width: 1000px)" srcset=features_img + "-x728.webp" type="image/webp")
+          source(media="(min-width: 768px)" srcset=features_img + "-x496.webp" type="image/webp")
+          source(media="(min-width: 480px)" srcset=features_img + "-x448.webp" type="image/webp")
+          source(srcset=features_img + "-x288.webp" type="image/webp")
+          source(media="(min-width: 1340px)" srcset=features_img + "-x894.jpg")
+          source(media="(min-width: 1000px)" srcset=features_img + "-x728.jpg")
+          source(media="(min-width: 768px)" srcset=features_img + "-x496.jpg")
+          source(media="(min-width: 480px)" srcset=features_img + "-x448.jpg")
+          |
+          |
+          img(src=features_img + "-x288.jpg" width="288" height="244" alt="Светлая комната с мебелью и телевизором")
+  .intro__features
+    .container
+      ul.intro__list.intro-features
+        each feature in features
+          li.intro-features__item
+            .intro-features__img
+              img(src=feature.img width='60' height='60' alt=feature.text)
+            p.intro-features__text #{feature.text}

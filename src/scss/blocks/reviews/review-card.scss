@@ -104,9 +104,6 @@
 }
 
 .review-card__text {
-  padding: 0;
-  margin: 0;
-
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -114,6 +111,16 @@
 
   @media (min-width: $desktop-width) {
     font-size: 16px;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

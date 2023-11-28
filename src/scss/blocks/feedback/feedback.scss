@@ -70,8 +70,9 @@
 
   row-gap: 10px;
 
-  input,
+  input:not([type="submit"]),
   textarea {
+    width: 100%;
     padding-top: 10px;
     padding-right: 20px;
     padding-bottom: 10px;
@@ -102,6 +103,8 @@
 
   font-size: 14px;
   font-weight: 700;
+
+  border: none;
 
   @media (min-width: $tablet-sm-width) {
     width: 146px;

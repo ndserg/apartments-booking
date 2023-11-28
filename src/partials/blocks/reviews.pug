@@ -11,7 +11,8 @@ section.reviews
                 h3.review-card__title #{review.title}
                 .review-card__stars
                   span(style="width:" +review.rating +"%;")
-              p.review-card__text #{review.text}
+              .review-card__text
+                p #{review.text}
               .review-card__footer
                 .review-card__author
                   p.review-card__person #{review.author}
