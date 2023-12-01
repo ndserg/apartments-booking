@@ -1,7 +1,5 @@
 .offers-list {
-  display: flex;
-
-  flex-direction: column;
+  display: grid;
 
   row-gap: 40px;
 
@@ -11,22 +9,27 @@
   list-style: none;
 
   @media (min-width: $mobile-lg-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 208px);
 
     column-gap: 30px;
   }
 
   @media (min-width: $tablet-sm-width) {
+    grid-template-columns: repeat(3, 234px);
+
     row-gap: 50px;
     column-gap: 17px;
   }
 
   @media (min-width: $tablet-lg-width) {
+    grid-template-columns: repeat(3, 280px);
+
     column-gap: 64px;
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 395px);
+
     row-gap: 80px;
     column-gap: 47px;
   }
@@ -40,22 +43,6 @@
   font-family: "Montserrat", "Arial", sans-serif;
   line-height: normal;
   color: $black;
-
-  @media (min-width: $mobile-lg-width) {
-    width: 208px;
-  }
-
-  @media (min-width: $tablet-sm-width) {
-    width: 234px;
-  }
-
-  @media (min-width: $tablet-lg-width) {
-    width: 280px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 395px;
-  }
 }
 
 .offers-list__title {
